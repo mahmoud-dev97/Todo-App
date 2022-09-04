@@ -1,0 +1,185 @@
+$Bright-Blue: hsl(220, 98%, 61%);
+$Check-Background: linear-gradient(hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+// Light Theme
+
+$Very-Light-Gray: hsl(0, 0%, 98%);
+$Very-Light-Grayish-Blue: hsl(236, 33%, 92%);
+$Light-Grayish-Blue: hsl(233, 11%, 84%);
+$Dark-Grayish-Blue: hsl(236, 9%, 61%);
+$Very-Dark-Grayish-Blue: hsl(235, 19%, 35%);
+
+// Dark Theme
+
+$Very-Dark-Blue: hsl(235, 21%, 11%);
+$Very-Dark-Desaturated-Blue: hsl(235, 24%, 19%);
+$Light-Grayish-Blue: hsl(234, 39%, 85%);
+$Light-Grayish-Blue-hover: hsl(236, 33%, 92%);
+$Dark-Grayish-Blue: hsl(234, 11%, 52%);
+$Very-Dark-Grayish-Blue: hsl(233, 14%, 35%);
+
+body {
+  input {
+    border-style: unset;
+    width: 100%;
+    padding: 5px 0;
+  }
+  .circle {
+    font-size: 30px;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+  }
+
+  .circle:hover {
+    color: hsl(280, 87%, 65%) !important;
+  }
+  input:focus {
+    outline: none;
+  }
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+  #todo-nav {
+    margin-top: -250px;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .back-pic {
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #input-todo,
+  #todo,
+  #btns {
+    width: 100%;
+    padding: 20px;
+  }
+  #todo {
+    p {
+      cursor: pointer;
+    }
+    p.active {
+      color: $Very-Dark-Grayish-Blue;
+      text-decoration: line-through;
+    }
+  }
+  #btns {
+    span {
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+  }
+  .check {
+    color: hsl(192, 100%, 67%) !important;
+  }
+  #todo-nav {
+    img {
+      cursor: pointer !important;
+    }
+  }
+}
+
+#dark {
+  background-color: $Very-Dark-Blue;
+  color: $Very-Light-Gray;
+  min-height: 100vh;
+  input {
+    background-color: $Very-Dark-Desaturated-Blue;
+    color: $Light-Grayish-Blue;
+  }
+  .back-pic {
+    background-image: url("../Assets/Images/bg-desktop-dark.jpg");
+  }
+  #input-todo,
+  #todos {
+    background-color: $Very-Dark-Desaturated-Blue;
+  }
+  .circle {
+    color: $Light-Grayish-Blue;
+  }
+
+  #btns {
+    span {
+      color: $Very-Dark-Grayish-Blue;
+    }
+    span:hover {
+      color: $Light-Grayish-Blue-hover;
+    }
+  }
+  #todos {
+    span.active {
+      color: $Bright-Blue;
+    }
+  }
+  #dnone {
+    background-color: $Very-Dark-Desaturated-Blue;
+    color: $Very-Dark-Grayish-Blue;
+    .active {
+      color: $Bright-Blue;
+    }
+  }
+}
+
+#light {
+  background-color: $Very-Light-Grayish-Blue;
+  color: $Very-Dark-Grayish-Blue;
+  min-height: 100vh;
+  input {
+    background-color: $Very-Light-Gray;
+    color: $Light-Grayish-Blue;
+  }
+  .back-pic {
+    background-image: url("../Assets/Images/bg-desktop-light.jpg");
+  }
+  #input-todo,
+  #todos {
+    background-color: $Very-Light-Gray;
+  }
+  .circle {
+    color: $Light-Grayish-Blue;
+  }
+
+  #btns {
+    span {
+      color: $Very-Dark-Grayish-Blue;
+    }
+    span:hover {
+      color: $Very-Dark-Grayish-Blue;
+    }
+  }
+  #todos {
+    span.active {
+      color: $Bright-Blue;
+    }
+  }
+  #todo-nav {
+    h1 {
+      color: $Very-Light-Gray;
+    }
+  }
+  #dnone {
+    background-color: $Very-Light-Gray;
+    color: $Very-Dark-Grayish-Blue;
+    .active {
+      color: $Bright-Blue;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  #dark {
+    .back-pic {
+      background-image: url("../Assets/Images/bg-mobile-dark.jpg");
+    }
+  }
+  #light {
+    .back-pic {
+      background-image: url("../Assets/Images/bg-mobile-light.jpg");
+    }
+  }
+}
